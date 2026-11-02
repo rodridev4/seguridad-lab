@@ -4,3 +4,4 @@
 *.vmdk
 .vscode/
 bandit-pass.txt
+*.swp
