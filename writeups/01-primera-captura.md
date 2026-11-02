@@ -7,20 +7,21 @@
 
 ## Respuestas
 
-1. **IPs.** TODO: tus IPs + por qué 192.168.1.14 es local (RFC 1918) y la otra es pública.
-2. **Puertos.** TODO: origen, destino y por qué el origen es efímero (no "dinámico").
-3. **Métodos.** TODO
-4. **User-Agent.** TODO
-5. **Texto claro.** TODO: qué se ve y qué implica.
+1. **IPs.** Mi equipo: `192.168.1.14`, rango privado (RFC 1918), no enrutable en internet.
+   Servidor: `34.223.124.45`, IP pública (AWS). Lo confirmé porque el paquete marca `source` y `destination`, y porque la primera es privada.
+2. **Puertos.** Origen `48738`, destino `80`. El origen es un puerto **efímero**: el sistema operativo lo asigna al azar para esa conexión, porque el 80 ya está ocupado por el servidor y así puede haber varias conexiones simultáneas.
+3. **Métodos.** Solo `GET`.
+4. **User-Agent.** `curl/8.5.0`. Delata la herramienta: curl, no un navegador.
+5. **Texto claro.** Sí: se ven `Host`, ruta y contenido. Al no estar cifrado, cualquiera que capture el tráfico en el camino puede leerlo.
 
 ## Evidencia
 
-![Follow TCP Stream](capturas/01-follow-stream.png)
+![Follow TCP Stream](capturas/01-primera-captura.png)
 
 ## Conclusión
 
-TODO: 3 líneas tuyas. Qué implica que HTTP no cifre, quién podría verlo y qué lo soluciona.
+Puedo concluir que http no cifra osea que se puede ver a simple vista de donde sale la conexion y hacia donde va, al no ser cifraco cualquiera podria verlo, la solucion seria pasar a https donde todo va cifrado.
 
 ## Dudas abiertas
 
-- TODO: lo que no entendiste. Un writeup sin dudas es sospechoso.
+Lo que me costo entender en si fue la informacion que entrega wireshark
