@@ -1,0 +1,6 @@
+*.pcapng
+*.iso
+*.vdi
+*.vmdk
+.vscode/
+bandit-pass.txt
