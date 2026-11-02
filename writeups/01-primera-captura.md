@@ -1,14 +1,26 @@
-1. ¿Cuál es la IP de tu equipo y cuál la del servidor? ¿Cómo las distinguiste?
-Mi ip es 192.168.1.14 y la del servidor 34.223.124.45, las distuingui ya que una dice source que es la fuente y la otra destination que es el destino de la consulta.
+# Writeup 01 — Tráfico HTTP en claro
 
-2. ¿Qué puerto usa tu equipo como origen y a qué puerto va? ¿Por qué el origen es un número alto?
-mi equipo usa el 48738 y va al 80. porque es un puerto dinamico
+**Fecha:** 2026-11-02
+**Herramientas:** tcpdump, Wireshark, curl
+**Captura:** `capturas/http-propia.pcap`
+**Objetivo:** identificar hosts, puertos y contenido visible en HTTP sin cifrar.
 
-3. ¿Qué métodos HTTP aparecen?
-GET
+## Respuestas
 
-4. ¿Qué dice el User-Agent? (debería delatarte: curl/8.x)
-curl/8.5.0
+1. **IPs.** TODO: tus IPs + por qué 192.168.1.14 es local (RFC 1918) y la otra es pública.
+2. **Puertos.** TODO: origen, destino y por qué el origen es efímero (no "dinámico").
+3. **Métodos.** TODO
+4. **User-Agent.** TODO
+5. **Texto claro.** TODO: qué se ve y qué implica.
 
-5. ¿ves el Host, la ruta y el contenido en texto claro?¿Qué implica eso para alguien que esté mirando el tráfico?
-si, se ve todo ya que al ser http no esta cifrado, esto implica que cualquiera que monitoree el trafico puede ver la informacion sin cifrar
+## Evidencia
+
+![Follow TCP Stream](capturas/01-follow-stream.png)
+
+## Conclusión
+
+TODO: 3 líneas tuyas. Qué implica que HTTP no cifre, quién podría verlo y qué lo soluciona.
+
+## Dudas abiertas
+
+- TODO: lo que no entendiste. Un writeup sin dudas es sospechoso.
