@@ -20,8 +20,8 @@
 
 ## Conclusión
 
-Puedo concluir que http no cifra osea que se puede ver a simple vista de donde sale la conexion y hacia donde va, al no ser cifraco cualquiera podria verlo, la solucion seria pasar a https donde todo va cifrado.
+HTTP expone el contenido de la petición: host, ruta, headers y cuerpo. HTTPS cifra ese contenido, pero un observador sigue viendo la IP de destino, el puerto y el dominio resuelto por DNS. Por eso HTTPS protege el qué, no el a dónde.
 
 ## Dudas abiertas
 
-Lo que me costo entender en si fue la informacion que entrega wireshark
+Lo que me costo entender en si fue la informacion que entrega Wireshark.
